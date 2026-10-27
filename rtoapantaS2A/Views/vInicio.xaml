@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rtoapantaS2A.Views.vInicio"
+             Title="Inicio">
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="25"
+        Spacing="15">
+            <Border>
+                <Label 
+                Text="Semana 2: Elementos GUI"
+                FontSize="18"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                TextColor="Blue"/>
+            </Border>
+            <!-- Caja de texto -->
+            <Entry 
+            x:Name="txtDato"
+            Placeholder="Ingrese el dato"/>
+            <!-- Selector -->
+            <Picker 
+            x:Name="pckPaises"
+            Title="Seleccione un país">
+                <Picker.Items>
+                    <x:String>México</x:String>
+                    <x:String>Colombia</x:String>
+                    <x:String>Argentina</x:String>
+                    <x:String>Ecuador</x:String>
+                </Picker.Items>
+            </Picker>
+            <!-- DatePicker con fecha actual y formato MM-dd-yyyy -->
+            <DatePicker x:Name="dpkFecha"
+            Date="12/31/2026"
+            Format="MM-dd-yyyy"/>
+            <Button 
+            x:Name="btnMostrar"
+            Text="Mostrar"
+            Clicked="btnMostrar_Clicked"/>
+            <Button x:Name="btnAbrir"
+            Text="Abrir Tarea"
+            Clicked="btnAbrir_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

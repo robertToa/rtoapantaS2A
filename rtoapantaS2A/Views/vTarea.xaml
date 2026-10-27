@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rtoapantaS2A.Views.vTarea"
+             Title="Tarea">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="25">
+            <Label 
+            Text="Calificaciones Universidad Uisrael"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            <Picker x:Name="pckEstudiantes" Title="Seleccione un estudiante">
+                <Picker.Items>
+                    <x:String>Carlos Andrés Pérez Gómez</x:String>
+                    <x:String>María Fernanda López Ruiz</x:String>
+                    <x:String>Juan Sebastián Torres Molina</x:String>
+                    <x:String>Ana Belén Castillo Vargas</x:String>
+                    <x:String>Diego Alejandro Sánchez León</x:String>
+                    <x:String>Valentina Sofía Morales Cedeño</x:String>
+                    <x:String>Mateo Nicolás Herrera Paz</x:String>
+                    <x:String>Gabriela Isabel Ramírez Ortiz</x:String>      
+                    <x:String>Daniel Esteban Mendoza Cruz</x:String>
+                    <x:String>Camila Alejandra Flores Paredes</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Parcial 1" />
+            <Entry 
+            x:Name="txtSeguimiento1" 
+            Placeholder="Ingrese el seguimiento 1" 
+            Keyboard="Numeric"/>
+            <Entry 
+            x:Name="txtNotaExamen1" 
+            Placeholder="Ingrese la nota del examen 1" 
+            Keyboard="Numeric"/>
+            <Entry 
+            x:Name="txtParcial1" 
+            Placeholder="Parcial 1" 
+            Keyboard="Numeric"
+            IsEnabled="False"/>
+            <Label Text="Parcial 2" />
+            <Entry 
+            x:Name="txtSeguimiento2" 
+            Placeholder="Ingrese el seguimiento 2" 
+            Keyboard="Numeric"/>
+            <Entry 
+            x:Name="txtNotaExamen2" 
+            Placeholder="Ingrese la nota del examen 2" 
+            Keyboard="Numeric"/>
+            <Entry 
+            x:Name="txtParcial2" 
+            Placeholder="Parcial 2" 
+            Keyboard="Numeric"
+            IsEnabled="False"/>
+            <Label Text="NOTA FINAL" />
+            <DatePicker x:Name="dpkFecha"
+            Date="12/31/2026"
+            Format="MM-dd-yyyy"/>
+            <Entry 
+                x:Name="txtFinal" 
+                Placeholder="Nota Final" 
+                Keyboard="Numeric"
+                IsEnabled="False"/>
+            <Entry 
+            x:Name="txtEstadoAprobacion" 
+            Placeholder="Estado de aprobación" 
+            IsEnabled="False"/>
+            <Button x:Name="btnCalcular"
+                Text="Calcular Nota"
+                Clicked="btnCalcular_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
